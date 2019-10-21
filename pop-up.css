@@ -1,0 +1,173 @@
+body, html{
+    background: rgb(245, 245, 245);
+    margin: 0px;
+}
+
+.container {
+    background:rgb(255, 235, 54);
+    color:rgb(120, 199, 67);
+    padding: 20px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    border: rgb(252, 102, 102) solid 2px;
+    width: 320px;
+}
+
+.container h1{
+    margin:0;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 20px;
+    background: rgba(97, 241, 41, 0.836);
+    padding:15px;
+    font-family: fantasy;
+}
+
+.flex-container h1{
+    margin:0px;
+}
+
+.flex-container img {
+    max-width: 40px;
+}
+
+#pop-up {
+    position: relative;
+    left:-300px;
+    animation: drop 0.5s ease forwards;
+}
+
+/* flip cards */
+
+.panels{
+    list-style-type: none;
+    padding: 0;
+    margin: 0px;
+}
+
+.panels {
+    margin:0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.panels li{
+    flex:1;
+    position: relative;
+    margin:0px 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 2em;
+    max-width: 400px;
+}
+
+.panels li div {
+    width: 100%;
+    padding: 20% 10px;
+    text-align: center;
+    color: rgb(245, 20, 114);
+    line-height: 0px;
+    cursor: pointer;
+    background: rgb(245, 220, 82);
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.panels div.front {
+    position: absolute;
+}
+
+.panels div.back {
+    transform: rotateY(90deg);
+}
+
+.panels li:hover div.front{
+    animation: flip 0.2s ease-in forwards;
+}
+
+.panels li:hover div.back{
+    animation: flip 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes flip{
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+/* END of flip cards */
+
+/* display */
+
+#display ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:0;
+    margin:0;
+}
+
+#display ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+}
+
+#display img {
+    max-width: 350px;
+}
+
+#display h2, button{
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    font-family: cursive;
+}
+
+#display button{
+    background: rgb(200, 231, 89);
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+/* END of display */
+
+
+@keyframes drop{
+    0%{opacity:0}
+    70%{transform: translateX(400px)}
+    100%{transform: translateX(300px);opacity: 1;}
+}
+
+.zoom{
+    position: absolute;
+    min-width: 200px;
+    width:40px;
+    opacity: 0;
+    animation: zoom 1.2s ease forwards;
+}
+
+@keyframes zoom{
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-1000px);
+
+    }
+}
+

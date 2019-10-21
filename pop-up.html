@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pop-up Example</title>
+    <link rel="stylesheet" href="pop-up.css">
+    
+</head>
+
+<body class="pop-up">
+
+    <nav>
+        <div class="flex-container">
+            <h1>Party Stuffs</h1>
+            <a href="#">
+                <img src="https://cdn0.iconfinder.com/data/icons/ecommerce-57/100/Ecommerce_RTE-03-512.png" alt="">
+            </a>
+        </div>
+    </nav>
+
+    
+    
+    <div id="display">
+        <ul>
+            <li>
+                <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+                <h2>Party Balloons</h2>
+                <button>Add to Cart</button>
+            </li>
+            <li>
+                <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+                <h2>Party Balloons</h2>
+                <button>Add to Cart</button>
+            </li>
+            <li>
+                <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+                <h2>Party Balloons</h2>
+                <button>Add to Cart</button>
+            </li>
+        </li>
+        <li>
+            <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+            <h2>Party Balloons</h2>
+            <button>Add to Cart</button>
+        </li>
+    </li>
+    <li>
+        <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+        <h2>Party Balloons</h2>
+        <button>Add to Cart</button>
+    </li>
+</li>
+
+</li>
+<li>
+    <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/3/30/2/Original_Brian-Patrick-Flynn_ice-cream-balloons_beauty-horiz.jpg.rend.hgtvcom.966.644.suffix/1427748833617.jpeg" alt="">
+    <h2>Party Balloons</h2>
+    <button>Add to Cart</button>
+</li>
+</ul>
+
+</div>
+
+<div>
+    <ul class="panels">
+        <li>
+            <div class="front">Lets Party!</div>
+            <div class="back">WOHOO!!</div>
+        </li>
+    </ul>
+    
+    
+</div>
+
+<div id="pop-up">
+    <div class="container">
+        <h1>Updates news</h1>
+        <p>Join us for loads of fun!</p>
+        <input type="email" placeholder="email" required>
+        <button>Sure!</button>
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  
+  <script>
+      $("button").on("click", function(){
+          $(this).closest("li")
+          .find("img")
+          .clone()
+          .addClass("zoom")
+          .appendTo(this);
+
+          setTimeout(function(){
+              $(".zoom").remove();
+          }, 1000);
+      });
+  </script>
+    
+</body>
+</html>
